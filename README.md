@@ -13,6 +13,9 @@ The web application is for King Shan, who will have to select four of six planet
 
 ## Development server
 
+The deployed UI can be found at https://finding-falcone-chi.vercel.app/
+
+
 To run the project on localhost :
 
 - Run `npm install` to install the dependencies.
