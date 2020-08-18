@@ -1,4 +1,4 @@
-# WaitlistedLabs
+# Finding Falcone
 
 The project is a game developed using Angular 8. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
