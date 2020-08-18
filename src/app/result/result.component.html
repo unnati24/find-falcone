@@ -1,0 +1,10 @@
+<div class="container" *ngIf="this.isLoaded">
+  <h2 align="center" *ngIf="this.response.status === 'success'">
+    Al Falcone has been found on planet
+    <em>{{ this.response.planet_name }}</em>
+  </h2>
+  <h2 align="center" *ngIf="this.response.status === 'false'">
+    Uh oh! Mission Failed!
+  </h2>
+  <button mat-stroked-button color="warn" routerLink="">START OVER</button>
+</div>

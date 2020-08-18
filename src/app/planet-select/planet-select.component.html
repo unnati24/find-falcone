@@ -1,0 +1,37 @@
+<div class="row">
+  <h2 align="center">WELCOME</h2>
+  <h1 align="center">KING SHAN</h1>
+  <h3 align="center">
+    Please select <em>four</em> planets you wish to search and
+    <button
+      title="Click to choose vehicles"
+      (click)="clickHandler(planetsList.selectedOptions.selected)"
+    >
+      PROCEED
+    </button>
+  </h3>
+
+  <div class="select-group">
+    <mat-selection-list #planetsList>
+      <mat-list-option
+        #planetOpt
+        *ngFor="let planet of planets"
+        [disabled]="selectedCount >= maxCount && !planetOpt.selected"
+        (click)="
+          updateSelectedCount(planetsList.selectedOptions.selected.length)
+        "
+        class="planets"
+      >
+        <img
+          matListAvatar
+          src="../../assets/images/{{ planet.name | lowercase }}.jpg"
+          alt="..."
+        />
+        <h2>
+          {{ planet.name }}
+        </h2>
+        <p>{{ planet.distance }} megamiles</p>
+      </mat-list-option>
+    </mat-selection-list>
+  </div>
+</div>

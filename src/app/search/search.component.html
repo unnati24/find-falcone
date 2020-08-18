@@ -1,0 +1,80 @@
+<div class="container">
+  <h2 align="center">Please select vehicles for respective destinations</h2>
+  <h2 align="center">Time Taken : {{ timeTaken }}</h2>
+
+  <div class="select-group">
+    <div class="collection">
+      <h3>{{ selectedPlanets[0].name }}</h3>
+      <mat-radio-group class="radio-group">
+        <ng-container *ngFor="let vehicle of vehicles">
+          <mat-radio-button
+            class="radio-button"
+            *ngIf="vehicle.max_distance >= selectedPlanets[0].distance"
+            [value]="vehicle"
+            [disabled]="vehicle.total_no > 0 ? false : true"
+            (change)="handleChange($event.value, selectedPlanets[0].name)"
+          >
+            {{ vehicle.name }} ({{ vehicle.total_no }})
+          </mat-radio-button>
+        </ng-container>
+      </mat-radio-group>
+    </div>
+
+    <div class="collection">
+      <h3>{{ selectedPlanets[1].name }}</h3>
+      <mat-radio-group class="radio-group">
+        <ng-container *ngFor="let vehicle of vehicles">
+          <mat-radio-button
+            class="radio-button"
+            *ngIf="vehicle.max_distance >= selectedPlanets[1].distance"
+            [value]="vehicle"
+            [disabled]="vehicle.total_no > 0 ? false : true"
+            (change)="handleChange($event.value, selectedPlanets[1].name)"
+          >
+            {{ vehicle.name }} ({{ vehicle.total_no }})
+          </mat-radio-button>
+        </ng-container>
+      </mat-radio-group>
+    </div>
+
+    <div class="collection">
+      <h3>{{ selectedPlanets[2].name }}</h3>
+      <mat-radio-group class="radio-group">
+        <ng-container *ngFor="let vehicle of vehicles">
+          <mat-radio-button
+            class="radio-button"
+            *ngIf="vehicle.max_distance >= selectedPlanets[2].distance"
+            [value]="vehicle"
+            [disabled]="vehicle.total_no > 0 ? false : true"
+            (change)="handleChange($event.value, selectedPlanets[2].name)"
+          >
+            {{ vehicle.name }} ({{ vehicle.total_no }})
+          </mat-radio-button>
+        </ng-container>
+      </mat-radio-group>
+    </div>
+
+    <div class="collection">
+      <h3>{{ selectedPlanets[3].name }}</h3>
+      <mat-radio-group class="radio-group">
+        <ng-container *ngFor="let vehicle of vehicles">
+          <mat-radio-button
+            class="radio-button"
+            *ngIf="vehicle.max_distance >= selectedPlanets[3].distance"
+            [value]="vehicle"
+            [disabled]="vehicle.total_no > 0 ? false : true"
+            (change)="handleChange($event.value, selectedPlanets[3].name)"
+          >
+            {{ vehicle.name }} ({{ vehicle.total_no }})
+          </mat-radio-button>
+        </ng-container>
+      </mat-radio-group>
+    </div>
+  </div>
+  <div class="button-group">
+    <button mat-stroked-button color="warn" (click)="submit()">
+      FIND AL FALCONE
+    </button>
+    <button mat-stroked-button color="warn" (click)="refresh()">REFRESH</button>
+  </div>
+</div>

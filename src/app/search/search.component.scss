@@ -1,0 +1,82 @@
+@import "../../variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  & > h2 {
+    margin-top: 121px;
+  }
+}
+
+h2,
+h3 {
+  font-weight: 600;
+  font-size: 35px;
+}
+
+h2 {
+  color: $primary-color;
+}
+
+h3 {
+  color: #dd6b4d;
+}
+
+.custom-select-panel.mat-select-panel {
+  background: $secondary-color;
+}
+
+.select-group {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  color: $secondary-color;
+}
+
+.radio-button {
+  margin: 5px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  margin: 50px 0;
+
+  button {
+    border: 2px solid #dd6b4d;
+  }
+}
+
+.mat-radio-outer-circle {
+  border-color: $secondary-color;
+}
+
+.mat-radio-button.mat-radio-disabled .mat-radio-outer-circle,
+.mat-radio-button.mat-radio-disabled.mat-radio-checked .mat-radio-outer-circle {
+  border-color: dimgray !important;
+}
+
+.mat-radio-button.mat-radio-disabled .mat-radio-label-content {
+  color: dimgray;
+}
+
+.mat-radio-button.mat-radio-disabled .mat-radio-inner-circle {
+  background-color: dimgray !important;
+}
+
+.mat-stroked-button:not([disabled]) {
+  border-color: firebrick;
+}

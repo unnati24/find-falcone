@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+@import "./variables.scss";
+
+* {
+  font-family: "Krona One", sans-serif !important;
+}
+
+html,
+body {
+  background-color: $background-color;
+}
+body {
+  margin: 0;
+}
+
+.mat-pseudo-checkbox::after {
+  color: $secondary-color;
+}
+
+.mat-pseudo-checkbox {
+  background: $primary-color;
+  width: 35px !important;
+  height: 20px !important;
+}

@@ -1,0 +1,32 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 180px;
+
+  .title {
+    font-size: 75px;
+    font-weight: 600;
+    color: #0da574;
+    padding: 0 20px;
+  }
+
+  .blink-image {
+    animation: blink normal 2s infinite ease-in-out;
+    cursor: pointer;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}

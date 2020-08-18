@@ -1,0 +1,42 @@
+@import "../../variables.scss";
+
+h1,
+h2,
+h3,
+p {
+  font-weight: 600;
+  color: $primary-color;
+}
+
+h1 {
+  font-size: 75px;
+}
+
+h2 {
+  font-size: 50px;
+  margin: 60px 0 -25px 0;
+}
+
+.planets {
+  padding: 20px 0 !important;
+  h2 {
+    font-size: 25px !important;
+  }
+}
+
+mat-list-option[aria-selected="true"] {
+  background: black;
+}
+
+.mat-list-item-disabled {
+  background-color: transparent;
+}
+
+button {
+  background-color: $primary-color;
+  color: black;
+  font-weight: 600;
+  margin: 10px 20px;
+  padding: 10px;
+  cursor: pointer;
+}
